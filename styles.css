@@ -1,0 +1,121 @@
+img, embed, object, video {
+  max-width: 100%;
+}
+body {
+  font: "Source Sans Pro, Helvetica Neue, Arial, sans-serif";
+  font-size: 18px;
+}
+h1 {
+  font-size: 3vw;
+  margin: 0;
+  color: #000000;
+}
+h2 {
+  font-size: 1.85vw;
+  margin: 0;
+}
+h3 {
+  font-size: 2.5vw;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-left: 15px;
+}
+h4 {
+  font-size: 1.5vw;
+}
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header-box {
+  text-align: center;
+  display:block;
+  width: 100%;
+  min-height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px;
+}
+.header-title {
+  margin: 0;
+}
+.logo {
+  max-width: 20%;
+  height: auto;
+}
+.section-image {
+  width: 100%;
+  height: auto;
+  float: left;
+  position: relative;
+  background-size: cover;
+}
+#work-sample-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+}
+.container {
+  position: relative;
+  max-width: 30%;
+  padding: 15px;
+}
+.image {
+  display: inline-block;
+  position: relative;
+  width: calc(33.33%-10px);
+  height: auto;
+}
+.overlay {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ff4a9e;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform:scale(0);
+  transition: .3s ease;
+}
+.container:hover .overlay {
+  transform: scale(1)
+}
+.text {
+  color: #ffffff;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+/*most laptops and desktop*/
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .portfolio {background-color: #ffffff;}
+  .overlay {background-color: #ffb3ba;}
+  .porfolio-container {background-color: #bae1ff;}
+}
+/*most tablets, iPad (Portrait)*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .portfolio {background-color: #ffffff;}
+  .overlay {background-color: #ffdfba;}
+  .portfolio-container {background-color: #ffb3ba;}
+
+}
+/*most tablets and iPad (landscape)*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .overlay {background-color: #ffffba;}
+  .portfolio-container {background-color: #bae1ff;}
+}
+/*most smartphones*/
+@media screen and (min-width: 320px) and (max-width: 480px;) {
+  body {font-size: 13px;}
+  .overlay {background-color: #ffdfba;}
+  .portfolio-container {background-color: #bae1ff;}
+  .image {display: flex;} {flex-flow: flow-wrap;}
+}
